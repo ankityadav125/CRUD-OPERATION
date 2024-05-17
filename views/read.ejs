@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <a href="/">Return to Home Page</a>
+    <h1>Users Details</h1>
+    <% users.forEach(function(user){ %>
+
+        <h3><%= user.name%></h3>
+        <h3><%= user.gender%></h3>
+        <h3><%= user.age%></h3>
+        <h3><%= user.username%></h3>
+        <h3><%= user.contact%></h3>
+        <h3><%= user.email%></h3>
+        <h3><%= user.address%></h3>
+        <a href="/edit/<%= user._id%>">Update Details</a>
+      <a href="/delete/<%= user._id%>">Delete Details</a>
+      
+   <% })%>
+
+
+
+</body>
+</html>
